@@ -5,4 +5,8 @@ Quote It - Favorite Movie Quotes Blog
 - Start the project in the terminal with 'rails new -d postgresql -T movie_blog'
 - cd into project folder and start the database with 'rake db:create'
 - Create the two models with 'rails g model users first_name:string last_name:string email:string password_digest:string' and 'rails g model movie:string year:integer quote:text'
+- Create one-to-many relationship: 
+    1. Open project in sublime and go to Posts migration file: add 't.belongs_to :user'
+    2. In post.rb (post model) add 'belongs_to :user' and in user.rb (User model) add 'has_many'
+
 - 
