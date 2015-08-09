@@ -12,9 +12,11 @@ class User < ActiveRecord::Base
       with: /@/,
       message: "not a valid format"
     }
-    
-  # def generate_username
-  #   num = Random.new.rand(10...100)
-  #   "#{self.first_name[0]}#{self.last_name}#{num}"
-  # end
+
+    #creates unique username for each user
+    def generate_username
+      num = Random.new.rand(10...100)
+      "#{self.first_name[0]}#{self.last_name}#{num}"
+    end
+
 end

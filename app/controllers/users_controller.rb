@@ -18,6 +18,7 @@ class UsersController < ApplicationController
       redirect_to profile_path
     else
       user = User.new(user_params)
+      @user.generate_username
       if user.save
         session[:user_id] = user.id
         # @user.generate_username

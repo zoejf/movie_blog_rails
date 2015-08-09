@@ -1,24 +1,30 @@
-<h1>Profile Page</h1>
-<div>
-  <p><%= current_user.first_name %></p>
-  <p><%= current_user.last_name %></p>
-  <p><%= current_user.email %></p>
-</div> 
-<%= link_to "Sign Out", logout_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2 panel panel-default">
+      <div class="panel-body">
+        <h1>Welcome,  <%= current_user.generate_username %></h1>
+        <div>
+          <p><%= current_user.first_name %> <%= current_user.last_name %></p>
+          <p><%= current_user.email %></p>
+        </div> 
+        <%= link_to "Sign Out", logout_path %>
 
-<br>
-<br>
+        <br>
+        <br>
 
-<% if current_user.posts.any?  %>
-  <h3>My Favorite Movie Quotes</h3>
-   <% current_user.posts.each do |post| %>
-    <h5><%= post.movie %> (<%= post.year %>)</h5>
-    <p>"<%= post.quote %>" <%= link_to "View", post_path(post) %></p>
-    <br>
-   <% end %>
-<% else %>
-  <h4>You don't have any favorite quotes, yet!</h4>
-<% end %>
- <%= link_to "Add A New Quote", new_post_path %>
-
+        <% if current_user.posts.any?  %>
+          <h3>My Favorite Movie Quotes</h3>
+           <% current_user.posts.each do |post| %>
+            <h5><%= post.movie %> (<%= post.year %>)</h5>
+            <p>"<%= post.quote %>" <%= link_to "View", post_path(post) %></p>
+            <br>
+           <% end %>
+        <% else %>
+          <h4>You don't have any favorite quotes, yet!</h4>
+        <% end %>
+         <%= link_to "Add A New Quote", new_post_path %>
+      </div>
+    </div>
+  </div>
+</div>
 
