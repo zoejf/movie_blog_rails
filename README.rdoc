@@ -9,4 +9,11 @@ Quote It - Favorite Movie Quotes Blog
     1. Open project in sublime and go to Posts migration file: add 't.belongs_to :user'
     2. In post.rb (post model) add 'belongs_to :user' and in user.rb (User model) add 'has_many'
 
-- 
+- After double checking relationships, migrate info to db with 'rake db:migrate'
+- Enter all of the routes, including vanity routes to the routes.rb file. For resources that  just need standard routes, use rails shortcuts like 'resources :posts, except: [:index]'
+- Create controllers for everything you need (here it was Users, Sessions, Posts, Pages) in the terminal with 'rails g controller Post index new create show edit update destroy
+'
+- Start rails server in the terminal with 'rails s'
+- Go to localhost:3000 in the browser and you should see a sample view for the index page.
+- In Gemfile, uncomment the line about the bcrypt version and then, in terminal, type 'bundle' to set up bcrypt. Might need to restart rails server. 
+- Update user model with 'has_secure_password' and 

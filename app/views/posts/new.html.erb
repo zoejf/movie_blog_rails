@@ -1,0 +1,8 @@
+<h1>Post A New Quote</h1>
+<%= form_for @post do |f| %>
+  <%= f.text_field :movie, placeholder: "Movie Title" %><br>
+  <%= f.text_field :year, placeholder: "Year" %><br>
+  <%= f.text_field :quote, placeholder: "Favorite Quote" %><br>
+  <br>
+  <%= f.submit "Save" %>
+<% end %>

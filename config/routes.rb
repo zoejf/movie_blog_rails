@@ -1,32 +1,4 @@
 Rails.application.routes.draw do
-  
-  get 'pages/show'
-
-  get 'session/new'
-
-  get 'session/create'
-
-  get 'session/destroy'
-
-  get 'user/new'
-
-  get 'user/create'
-
-  get 'user/show'
-
-  get 'post/index'
-
-  get 'post/new'
-
-  get 'post/create'
-
-  get 'post/show'
-
-  get 'post/edit'
-
-  get 'post/update'
-
-  get 'post/destroy'
 
   #pages route
   get '/about', to: 'pages#show'
@@ -34,7 +6,7 @@ Rails.application.routes.draw do
   #users routes
   get '/signup', to: 'users#new'
   get '/profile', to: 'users#show'
-  resources :users, only: [:create]
+  resources :users, only: [:create, :index]
 
   #sessions routes
   get '/login', to: 'sessions#new'

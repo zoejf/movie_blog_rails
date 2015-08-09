@@ -1,0 +1,8 @@
+<h1>Log In</h1>
+<%= form_for :user, url: sessions_path do |f| %>
+  <%= f.email_field :email, placeholder: "Email" %><br>
+  <%= f.password_field :password, placeholder: "Password" %><br>
+  <br>
+  <%= f.submit "Log In" %>
+<% end %>
+<p>Not a member yet?  <%= link_to "Sign Up", signup_path %></p>
