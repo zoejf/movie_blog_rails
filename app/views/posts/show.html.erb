@@ -1,12 +1,13 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-8 col-sm-offset-2 panel panel-default">
+    <div class="col-sm-6 col-sm-offset-3 panel panel-default">
       <div class="panel-body">
         <h1> <%= @post.movie %> (<%= @post.year %>)</h1>
         <p>  "<%= @post.quote %>"</p>
 
         <% if current_user && current_user.posts.include?(@post) %>
           <%= link_to "Edit", edit_post_path(@post) %>
+          <br>
           <%= link_to "Delete", @post, method: :delete %>
         <% end %>
       </div>

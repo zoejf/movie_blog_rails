@@ -1,5 +1,32 @@
 body {
-  background-image: url(https://c2.staticflickr.com/4/3169/2582856052_0142c8933c_z.jpg?zz=1);
+  background-image: url("http://i.imgur.com/2JJAvHU.jpg");
+  background-size: 100%;
+}
+
+#brand {
+  font-family: 'Special Elite', cursive; !important
+  font-size: 200%; !important
+}
+
+.panel {
+  background-color: #f8f8f8;
+  opacity: 0.9;
+  vertical-align: middle;
+  text-align: center
+}
+
+h1 {
+  font-family: 'Special Elite', cursive; !important
+}
+
+h2 {
+  font-family: 'Special Elite', cursive; !important
+}
+h3 {
+  font-family: 'Special Elite', cursive; !important
+}
+h4 {
+  font-family: 'Special Elite', cursive; !important
 }
 
 

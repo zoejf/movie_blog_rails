@@ -5,17 +5,22 @@
         <h1>Quote It!</h1>
         <h4>share your favorite movie and tv quotes</h4>
         <br>
-         <% @posts.each do |post| %>
-          <h4> <%= post.movie %> (<%= post.year %>)</h4>
-          <p> "<%= post.quote %>" <%= link_to "View", post_path(post) %></p>
-          <br>
-         <% end %>
-        <br>
-
         <% if current_user %>
-          <%= link_to "Add Your Favorite Quote", new_post_path %>
+          <%= link_to "Add A Favorite Quote", new_post_path %>
         <% end %>
       </div>
+    </div>
+    <div class="row">
+      <% @posts.each do |post| %>
+        <div class="col-sm-6 col-sm-offset-3 panel panel-default" style="text-align:center">
+          <div class="panel-body movie-post">
+            <br>
+              <h4> <%= post.movie %> (<%= post.year %>)</h4>
+              <p> "<%= post.quote %>" <%= link_to "View", post_path(post) %></p>
+              <br>
+          </div>
+      </div>
+      <% end %>
     </div>
   </div>
 </div>
